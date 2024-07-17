@@ -1,7 +1,4 @@
 #include "rclcpp/rclcpp.hpp"
-#include "rclcpp/utilities.hpp"
-#include "std_msgs/msg/detail/float32__struct.hpp"
-#include "std_msgs/msg/float32.hpp"
 #include "std_msgs/msg/float32_multi_array.hpp"
 #include <Eigen/Dense>
 #include <cstddef>
