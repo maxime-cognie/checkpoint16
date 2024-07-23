@@ -30,26 +30,32 @@ private:
     RCLCPP_INFO(this->get_logger(), "Move forward!");
     twist_2_wheels(0.0, 0.5, 0.0);
     rclcpp::sleep_for(3s);
+    twist_2_wheels(0.0, 0.0, 0.0);
 
     RCLCPP_INFO(this->get_logger(), "Move backward!");
     twist_2_wheels(0.0, -0.5, 0.0);
     rclcpp::sleep_for(3s);
+    twist_2_wheels(0.0, 0.0, 0.0);
 
     RCLCPP_INFO(this->get_logger(), "Move sideways to the left!");
     twist_2_wheels(0.0, 0.0, 0.5);
     rclcpp::sleep_for(3s);
+    twist_2_wheels(0.0, 0.0, 0.0);
 
     RCLCPP_INFO(this->get_logger(), "Move sideways to the right!");
     twist_2_wheels(0.0, 0.0, -0.5);
     rclcpp::sleep_for(3s);
+    twist_2_wheels(0.0, 0.0, 0.0);
 
     RCLCPP_INFO(this->get_logger(), "turn clockwise!");
-    twist_2_wheels(1.5708, 0.0, 0.0);
-    rclcpp::sleep_for(3s);
-
-    RCLCPP_INFO(this->get_logger(), "turn counter-clockwise!");
     twist_2_wheels(-1.5708, 0.0, 0.0);
     rclcpp::sleep_for(3s);
+    twist_2_wheels(0.0, 0.0, 0.0);
+
+    RCLCPP_INFO(this->get_logger(), "turn counter-clockwise!");
+    twist_2_wheels(1.5708, 0.0, 0.0);
+    rclcpp::sleep_for(3s);
+    twist_2_wheels(0.0, 0.0, 0.0);
   }
 
   void twist_2_wheels(const float wz, const float vx, const float vy) {
